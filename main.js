@@ -94,6 +94,11 @@ function countBelow50() {
 
 function lowGradesTo50() {
   // Change all grades that are below 50 to be equal to 50.
+  for (let i = 0; i < grades.length; i++) {
+    if (grades[i] < 50) {
+      grades[i] = 50;
+    }
+  }
   grades.filter(change)
   function change(v, i){
     if (v < 50){
